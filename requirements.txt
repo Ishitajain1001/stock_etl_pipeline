@@ -1,0 +1,11 @@
+psycopg2-binary
+python-dotenv
+requests
+AIRFLOW_VERSION=2.9.1
+PYTHON_VERSION=3.10
+CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+
+pip install --upgrade pip
+pip install -r requirements.txt -c "$CONSTRAINT_URL"
+SQLAlchemy>=2.0
+
